@@ -68,6 +68,4 @@ function getFirstChar(node) {
     return null;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  addZhEnBreaks(document.body)
-});
+export default addZhEnBreaks;
