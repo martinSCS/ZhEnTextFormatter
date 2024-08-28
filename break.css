@@ -1,0 +1,2 @@
+.zh-en-break:before { content: ' '; }
+.no-zh-en-break .zh-en-break:before { content: ''!important; }
