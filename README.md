@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 以下是插件处理后的文本示例：
 
-![示例截图](https://yourimagehost.com/screenshot.png)
+![示例截图](img/shot.png)
 
 在示例中，插件自动在中英文字符之间插入了空隙，使文本显示更为舒适；同时也**不会向文本中添加空格**影响用户复制结果。
 
