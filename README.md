@@ -10,19 +10,33 @@
 
 ## 特性
 
-- **自动检测**：自动检测中英文字符的切换，智能插入断行符号。
-- **支持多种字符**：支持包括中文、日文假名、韩文谚文、CJK标点等在内的多种 CJK 字符。
-- **自定义样式**：允许用户通过 CSS 自定义断行符的样式。
-- **灵活禁用**：提供了灵活的机制，允许在特定区域禁用断行效果。
+- **自动检测**：自动检测中英文字符的切换处，插入空隙。
+- **支持多种字符**：支持包括中文、日文假名、韩文谚文、CJK标点等在内的多种 CJK 字符或全角字符。
+- **自定义样式**：允许用户通过 CSS 自定义空隙宽度。
+- **灵活禁用**：提供了灵活的机制，允许在特定区域禁用效果。
+- **只针对行内元素**：效果只针对行内元素，段间元素之间不做处理。不处理 HTML 中的换行和缩进用的 `TEXT_NODE`。
 
 ## 安装和使用
 
 ### 1. 引入插件
 
-将插件的 JavaScript 文件和 CSS 文件引入你的项目中。例如，在HTML文件中：
+**方法 1**：使用 npm 包管理工具：
+
+```shell
+npm i zhentextformatter
+```
+
+**方法 2**：将插件的 JavaScript 文件和 CSS 文件引入你的项目中。例如，在HTML文件中：
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/martinSCS/ZhEnTextFormatter/break.css">
+<script src="https://cdn.jsdelivr.net/gh/martinSCS/ZhEnTextFormatter/formatter.js"></script>
+```
+
+或
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zhentextformatter/break.css">
 <script src="https://cdn.jsdelivr.net/gh/martinSCS/ZhEnTextFormatter/formatter.js"></script>
 ```
 
@@ -85,7 +99,3 @@ document.addEventListener('DOMContentLoaded', function() {
 - **Email**: martinscsjt@gmail.com
 - **GitHub Issues**: [issues page](https://github.com/martinSCS/ZhEnTextFormatter/issues)
 - **Twitter**: [@thisisMartin](https://twitter.com/thisisMartin)
-
----
-
-你可以根据实际情况进一步调整，比如添加项目徽标、详细的使用案例、安装方法（如通过 npm 或 CDN），或补充更多的常见问题。如果有其他特定需求或问题，随时告诉我！
