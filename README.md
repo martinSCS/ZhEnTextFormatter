@@ -1,8 +1,8 @@
 # ZhEnTextFormatter 中英混排空隙添加器
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/yourusername/EnZhTextFormatter/releases)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/yourusername/EnZhTextFormatter/actions)
+[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/releases)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/actions)
 
 ## 项目描述
 
