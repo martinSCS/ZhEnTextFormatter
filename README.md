@@ -37,7 +37,7 @@ npm i zhentextformatter
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zhentextformatter/break.css">
-<script src="https://cdn.jsdelivr.net/gh/martinSCS/ZhEnTextFormatter/formatter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/zhentextformatter/formatter.js"></script>
 ```
 
 ### 2. 使用插件
