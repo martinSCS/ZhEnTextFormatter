@@ -1,5 +1,5 @@
 function addZhEnBreaks(node) {
-    const skipTags = ['SCRIPT', 'STYLE', 'NOSCRIPT', 'IFRAME', 'OBJECT'];
+    const skipTags = ['SCRIPT', 'STYLE', 'NOSCRIPT', 'IFRAME', 'OBJECT', 'PRE', 'CODE'];
 
     if (skipTags.includes(node.nodeName)) {
         return;
@@ -92,9 +92,5 @@ function getFirstChar(node) {
     }
     return null;
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    addZhEnBreaks(document.body)
-});
 
 export default addZhEnBreaks;
