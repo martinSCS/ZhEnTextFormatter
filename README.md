@@ -52,12 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ### 3. 自定义样式
 
-如果你想在某些元素中禁用空隙效果，只需在该元素上添加 `no-zh-en-break` 类：
+#### 如果你想在某些元素中禁用空隙效果，只需在该元素上添加 `no-zh-en-break` 类：
 
 ```html
 <div class="no-zh-en-break">
     <p>这段text不会被自动插入空隙。</p>
 </div>
+```
+
+#### 如果你想要给特定的元素中使用特定的空隙宽度，只需设定该元素的 `--zh-en-break-width` 属性即可。**（宽度默认为 `0.3em` ）**
+
+```css
+.a-certain-class {
+    --zh-en-break-width: 0.5em;
+}
 ```
 
 ## 示例
