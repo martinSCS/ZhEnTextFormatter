@@ -9,7 +9,8 @@ function addZhEnBreaks(node) {
             return;
         }
     }
-    if (node.nextSibling) {
+    
+    if (node.nextSibling && !isBlockElement(node)) {
         let lastChar = getLastChar(node);
         let firstCharNextSibling = getFirstChar(node.nextSibling);
 
@@ -47,6 +48,18 @@ function addZhEnBreaks(node) {
             addZhEnBreaks(children[i]);
         }
     }
+}
+
+function isBlockElement(node) {
+    const blockTags = ['DIV', 'P', 'SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'TABLE', 'ASIDE', 'NAV', 'FIGURE', 'MAIN', 'FORM'];
+    const display = window.getComputedStyle(node).display;
+
+    return blockTags.includes(node.nodeName) || 
+           display === 'block' || 
+           display === 'flex' || 
+           display === 'grid' || 
+           display === 'table' || 
+           display === 'list-item';
 }
 
 function isChinese(char) {
