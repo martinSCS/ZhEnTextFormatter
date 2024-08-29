@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ### 3. 自定义样式
 
-如果你想在某些元素中禁用断行效果，只需在该元素上添加 `no-zh-en-break` 类：
+如果你想在某些元素中禁用空隙效果，只需在该元素上添加 `no-zh-en-break` 类：
 
 ```html
 <div class="no-zh-en-break">
-    <p>这段text不会被自动插入断行符。</p>
+    <p>这段text不会被自动插入空隙。</p>
 </div>
 ```
 
