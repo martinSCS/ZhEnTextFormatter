@@ -1,7 +1,7 @@
 # ZhEnTextFormatter 中英混排空隙添加器
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.5-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/releases)
+[![Version](https://img.shields.io/badge/version-1.0.6-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/releases)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/actions)
 
 ## 项目描述
@@ -38,6 +38,12 @@ npm i zhentextformatter
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zhentextformatter/break.css">
 <script src="https://cdn.jsdelivr.net/npm/zhentextformatter/formatter.js"></script>
+```
+
+**方法 3**：在 JavaScript 中导入：
+
+```javascript
+import anyNameYouLike from 'path/to/your/directory/formatter.js';
 ```
 
 ### 2. 使用插件
