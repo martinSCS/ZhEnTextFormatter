@@ -6,11 +6,15 @@ function addZhEnBreaks(node) {
     }
     if (node.classList) {
         if (node.classList.contains('no-zh-en-break')) {
+            node.classList.remove('no-zh-en-break');
+            if (node.classList.length === 0) {
+                node.removeAttribute('class');
+            }
             return;
         }
     }
-    
-    if (node.nextSibling && !isBlockElement(node)) {
+
+    if (node.nextSibling && !isBlockElement(node) && !/^[\s\n]*$/.test(node.textContent)) {
         let lastChar = getLastChar(node);
         let firstCharNextSibling = getFirstChar(node.nextSibling);
 
@@ -18,9 +22,9 @@ function addZhEnBreaks(node) {
             if (node.nodeType === Node.ELEMENT_NODE) {
                 node.insertAdjacentHTML('afterend', '<span class="zh-en-break"></span>');
             } else {
-                let enzhBreak = document.createElement('span');
-                enzhBreak.className = 'zh-en-break';
-                node.parentNode.insertBefore(enzhBreak, node.nextSibling);
+                let zhenBreak = document.createElement('span');
+                zhenBreak.className = 'zh-en-break value';
+                node.parentNode.insertBefore(zhenBreak, node.nextSibling);
             }
         }
     }
@@ -57,12 +61,12 @@ function isBlockElement(node) {
     const blockTags = ['DIV', 'P', 'SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'TABLE', 'ASIDE', 'NAV', 'FIGURE', 'MAIN', 'FORM'];
     const display = window.getComputedStyle(node).display;
 
-    return blockTags.includes(node.nodeName) || 
-           display === 'block' || 
-           display === 'flex' || 
-           display === 'grid' || 
-           display === 'table' || 
-           display === 'list-item';
+    return blockTags.includes(node.nodeName) ||
+        display === 'block' ||
+        display === 'flex' ||
+        display === 'grid' ||
+        display === 'table' ||
+        display === 'list-item';
 }
 
 function isChinese(char) {
@@ -88,5 +92,9 @@ function getFirstChar(node) {
     }
     return null;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    addZhEnBreaks(document.body)
+});
 
 export default addZhEnBreaks;
