@@ -51,6 +51,9 @@ function addZhEnBreaks(node) {
 }
 
 function isBlockElement(node) {
+    if (node.nodeType !== Node.ELEMENT_NODE) {
+        return false;
+    }
     const blockTags = ['DIV', 'P', 'SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'UL', 'OL', 'LI', 'TABLE', 'ASIDE', 'NAV', 'FIGURE', 'MAIN', 'FORM'];
     const display = window.getComputedStyle(node).display;
 
