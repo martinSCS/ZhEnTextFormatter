@@ -4,8 +4,10 @@ function addZhEnBreaks(node) {
     if (skipTags.includes(node.nodeName)) {
         return;
     }
-    if (node.classList.contains('no-zh-en-break')) {
-        return;
+    if (node.classList) {
+        if (node.classList.contains('no-zh-en-break')) {
+            return;
+        }
     }
     if (node.nextSibling) {
         let lastChar = getLastChar(node);
