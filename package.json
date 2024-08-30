@@ -1,0 +1,29 @@
+{
+  "name": "zhentextformatter",
+  "version": "1.0.5",
+  "description": "ZhEnTextFormatter 是一个轻量级的 JavaScript 插件，旨在优化中英文混排文本的排版。它通过在中英文字符之间自动插入空隙，改善文本的可读性。该插件特别适合处理包含中日韩（CJK）字符的网页内容，使混排文本的显示更加美观。",
+  "main": "./formatter.js",
+  "types": "./formatter.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinSCS/ZhEnTextFormatter.git"
+  },
+  "keywords": [
+    "text formatting", "chinese text", "english text", "text parser",
+    "text converter", "javascript", "unicode", "text processing",
+    "multilingual applications", "internationalization", "localization",
+    "i18n", "l10n", "web development", "app development", "content management",
+    "data processing", "automated formatting", "language tools",
+    "bilingual text management", "cross-language support", "language integration",
+    "text manipulation"
+  ],
+  "author": "Martin的杂货铺",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinSCS/ZhEnTextFormatter/issues"
+  },
+  "homepage": "https://github.com/martinSCS/ZhEnTextFormatter#readme"
+}
