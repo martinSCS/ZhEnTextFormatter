@@ -102,6 +102,9 @@ function isBlockElement(node) {
         "FIGURE",
         "MAIN",
         "FORM",
+        "TR",
+        "TD",
+        "TH"
     ];
     const display = window.getComputedStyle(node).display;
 
