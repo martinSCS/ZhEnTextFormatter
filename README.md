@@ -1,7 +1,7 @@
 # ZhEnTextFormatter 中英混排空隙添加器
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.6-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/releases)
+[![Version](https://img.shields.io/badge/version-1.0.7-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/releases)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/actions)
 
 ## 项目描述
@@ -15,6 +15,7 @@
 - **自定义样式**：允许用户通过 CSS 自定义空隙宽度。
 - **灵活禁用**：提供了灵活的机制，允许在特定区域禁用效果。
 - **只针对行内元素**：效果只针对行内元素，段间元素之间不做处理。不处理 HTML 中的换行和缩进用的 `TEXT_NODE`。
+- **自动避让前后的空格**：如果文字的前后有空格，则不会在文字和空格之间插入空隙。
 
 ## 安装和使用
 
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 ```
 
-#### 如果你想要给特定的元素中使用特定的空隙宽度，只需设定该元素的 `--zh-en-break-width` 属性即可。**（宽度默认为 `0.3em` ）**
+#### 如果你想要给特定的元素中使用特定的空隙宽度，只需设定该元素的 `--zh-en-break-width` 属性即可。**（宽度默认为 `0.25em` ）**
 
 ```css
 .a-certain-class {
