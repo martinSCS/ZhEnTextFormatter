@@ -30,7 +30,9 @@ function addZhEnBreaks(node) {
             lastChar &&
             firstCharNextSibling &&
             isChinese(lastChar) !== isChinese(firstCharNextSibling) &&
-            !(isSpace(lastChar) || isSpace(firstCharNextSibling))
+            !(isSpace(lastChar) || isSpace(firstCharNextSibling)) &&
+            !(isPunctuation(lastChar) && isChinese(firstCharNextSibling)) &&
+            !(isPunctuation(firstCharNextSibling) && isChinese(lastChar))
         ) {
             if (node.nodeType === Node.ELEMENT_NODE) {
                 node.insertAdjacentHTML(
@@ -56,7 +58,11 @@ function addZhEnBreaks(node) {
         let needsChange = false;
         for (let i = 0; i < textContent.length - 1; i++) {
             newContent += textContent[i];
-            if (!(isSpace(textContent[i]) || isSpace(textContent[i + 1])) && isChinese(textContent[i]) !== isChinese(textContent[i + 1])) {
+            if (!(isSpace(textContent[i]) || isSpace(textContent[i + 1])) &&
+                isChinese(textContent[i]) !== isChinese(textContent[i + 1]) &&
+                !(isPunctuation(textContent[i]) && !(isChinese(textContent[i + 1]))) &&
+                !(isPunctuation(textContent[i + 1]) && !(isChinese(textContent[i])))
+            ) {
                 newContent += '<span class="zh-en-break"></span>';
                 needsChange = true;
             }
@@ -129,6 +135,10 @@ function isChinese(char) {
 
 function isSpace(char) {
     return /[ \u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/u.test(char);
+}
+
+function isPunctuation(char) {
+    return /\p{P}/u.test(char);
 }
 
 function getLastChar(node) {
