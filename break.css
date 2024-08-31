@@ -1,4 +1,6 @@
 .zh-en-break {
-  display: inline-block;
-  margin-left: var(--zh-en-break-width, 0.25em);
+  display: inline-block!important;
+  margin: 0!important;
+  margin-left: var(--zh-en-break-width, 0.3em)!important;
+  padding: 0!important;
 }

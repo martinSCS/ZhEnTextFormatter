@@ -38,14 +38,19 @@ function addZhEnBreaks(node) {
                     '<span class="zh-en-break"></span>',
                 );
             } else {
-                let zhenBreak = document.createElement("span");
-                zhenBreak.className = "zh-en-break";
-                node.parentNode.insertBefore(zhenBreak, node.nextSibling);
+                if (!(/^[\s\n]*$/.test(node.textContent))) {
+                    let zhenBreak = document.createElement("span");
+                    zhenBreak.className = "zh-en-break";
+                    node.parentNode.insertBefore(zhenBreak, node.nextSibling);
+                }
             }
         }
     }
 
     if (node.nodeType === Node.TEXT_NODE) {
+        if (/^[\s\n]*$/.test(node.textContent)) {
+            return;
+        }
         let textContent = Array.from(node.textContent);
         let newContent = "";
         let needsChange = false;
@@ -145,6 +150,5 @@ function getFirstChar(node) {
     }
     return null;
 }
-
 
 export default addZhEnBreaks;
