@@ -2,6 +2,6 @@
   width: initial!important;
   display: inline-block!important;
   margin: 0!important;
-  margin-left: var(--zh-en-break-width, 0.125em)!important;
+  margin-left: var(--zh-en-break-width, 0.167em)!important;
   padding: 0!important;
 }
