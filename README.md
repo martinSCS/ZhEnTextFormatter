@@ -4,6 +4,11 @@
 [![Version](https://img.shields.io/badge/version-1.0.9-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/releases)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/actions)
 
+> Safari 和 Chrome 已经开始支持 CSS 属性 `text-autospace`。本项目建议转向使用 `text-autospace` 属性。
+>
+> - [CSS Text Module Level 4](https://drafts.csswg.org/css-text-4/#text-autospace-property)
+> - [Chrome for Developers](https://developer.chrome.com/blog/css-i18n-features?hl=zh-cn)
+
 ## 项目描述
 
 **ZhEnTextFormatter** 是一个轻量级的 JavaScript 插件，旨在优化中英文混排文本的排版。它通过在中英文字符之间自动插入空隙，改善文本的可读性。该插件特别适合处理包含中日韩（CJK）字符的网页内容，使混排文本的显示更加美观。
