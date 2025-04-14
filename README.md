@@ -4,6 +4,8 @@
 [![Version](https://img.shields.io/badge/version-1.0.9-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/releases)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/martinSCS/ZhEnTextFormatter/actions)
 
+> [!Tip]
+>
 > Safari 和 Chrome 已经开始支持 CSS 属性 `text-autospace`。本项目建议转向使用 `text-autospace` 属性。
 >
 > - [CSS Text Module Level 4](https://drafts.csswg.org/css-text-4/#text-autospace-property)
