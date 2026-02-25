@@ -6,7 +6,7 @@
 
 > [!Tip]
 >
-> Safari 和 Chrome 已经开始支持 CSS 属性 `text-autospace`。本项目建议转向使用 `text-autospace` 属性。
+> 主流浏览器均已经开始支持 CSS 属性 `text-autospace`。建议转向使用 `text-autospace` 属性。
 >
 > - [CSS Text Module Level 4](https://drafts.csswg.org/css-text-4/#text-autospace-property)
 > - [Chrome for Developers](https://developer.chrome.com/blog/css-i18n-features?hl=zh-cn)
